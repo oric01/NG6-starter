@@ -2,3 +2,5 @@ generator/
 dist/
 **/*.spec.js
 spec.bundle.js
+test
+karma_html
