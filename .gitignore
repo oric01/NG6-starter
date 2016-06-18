@@ -2,7 +2,10 @@
 .DS_Store
 .tmp
 .git
-node_modules
+node_modules/
 .settings
 *.log
 dist/
+test/
+client/app/styles/custom/custom.styl
+karma_html/

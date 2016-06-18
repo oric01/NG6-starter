@@ -2,12 +2,12 @@ import template from './home.html';
 import controller from './home.controller';
 import './home.styl';
 
-let homeComponent = {
+const homeComponent = {
   restrict: 'E',
   bindings: {},
   template,
   controller,
-  controllerAs: 'vm'
+  controllerAs: 'vm',
 };
 
 export default homeComponent;

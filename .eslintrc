@@ -1,0 +1,26 @@
+{
+  "extends": ["airbnb","angular"],
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "plugins": [
+    "disable"
+  ],
+  "global" : {
+    "console" : true,
+    "require" : true
+  },
+  "rules": {
+    "no-multi-spaces": [
+      "error",
+      {
+        "exceptions": {
+          "VariableDeclarator": true,
+          "ImportDeclaration": true
+        }
+      }
+    ],
+    "angular/module-setter" : 0
+  }
+}
