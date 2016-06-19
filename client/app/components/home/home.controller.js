@@ -1,5 +1,5 @@
 class HomeController {
-  constructor() {
+  constructor() { // eslint-disable-line
     this.name = 'home';
   }
 }

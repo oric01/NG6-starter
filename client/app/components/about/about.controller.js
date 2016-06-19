@@ -1,5 +1,5 @@
 class AboutController {
-  constructor() {
+  constructor() { // eslint-disable-line
     this.name = 'about';
   }
 }

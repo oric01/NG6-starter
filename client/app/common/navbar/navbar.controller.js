@@ -1,5 +1,5 @@
 class NavbarController {
-  constructor() {
+  constructor() { // eslint-disable-line
     this.name = 'navbar';
   }
 }

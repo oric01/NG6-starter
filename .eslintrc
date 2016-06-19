@@ -1,5 +1,8 @@
 {
-  "extends": ["airbnb","angular"],
+  "extends": [
+    "airbnb",
+    "angular"
+  ],
   "env": {
     "node": true,
     "mocha": true
@@ -7,9 +10,9 @@
   "plugins": [
     "disable"
   ],
-  "global" : {
-    "console" : true,
-    "require" : true
+  "global": {
+    "console": true,
+    "require": true
   },
   "rules": {
     "no-multi-spaces": [
@@ -21,6 +24,17 @@
         }
       }
     ],
-    "angular/module-setter" : 0
+    "angular/module-setter": 0,
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": false
+        }
+      }
+    ],
+    "valid-jsdoc": 2
   }
 }
