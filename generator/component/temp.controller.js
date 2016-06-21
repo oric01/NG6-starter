@@ -1,5 +1,5 @@
 class <%= upCaseName %>Controller {
-  constructor() {
+  constructor() { // eslint-disable-line
     this.name = '<%= name %>';
   }
 }

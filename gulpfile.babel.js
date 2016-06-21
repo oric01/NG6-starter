@@ -10,6 +10,7 @@ import template from 'gulp-template';
 import yargs    from 'yargs';
 import gutil    from 'gulp-util';
 import serve    from 'browser-sync';
+import del      from 'del';
 import webpackDevMiddelware from 'webpack-dev-middleware';
 import webpachHotMiddelware from 'webpack-hot-middleware';
 import colorsSupported      from 'supports-color';
@@ -118,10 +119,18 @@ import historyApiFallback   from 'connect-history-api-fallback';
         name,
         upCaseName: cap(name),
       }))
-      .pipe(rename(() => {
-        path.basename = path.basename.replace('temp', name);
+      .pipe(rename((currentPath) => {
+        const cp = currentPath;
+        cp.basename = cp.basename.replace('temp', name);
       }))
       .pipe(gulp.dest(destPath));
+  });
+
+  gulp.task('clean', (cb) => {
+    del([paths.dest]).then(() => {
+      gutil.log('[clean]', paths);
+      cb();
+    });
   });
 
   gulp.task('default', ['serve']);
