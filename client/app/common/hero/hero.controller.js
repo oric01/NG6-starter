@@ -1,6 +1,8 @@
 class HeroController {
-  constructor() { // eslint-disable-line
+  constructor(HeroService) { // eslint-disable-line
+    'ngInject';
     this.name = 'Superman';
+    this.HeroService = HeroService;
   }
 
   /** return a Hello message
@@ -10,6 +12,14 @@ class HeroController {
      */
   sayHello(name) {
     return `${this.name} say "Hello ${name}"`;
+  }
+
+  /** Return a Hero List
+   *
+   * @returns {*} hero list
+     */
+  getList() {
+    return this.HeroService.getList();
   }
 }
 

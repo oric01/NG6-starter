@@ -10,7 +10,10 @@ const UserFactory = function UF() {
 
   const isSignedIn = () => user.isSignedIn;
 
-  return { getUser, isSignedIn };
+  return {
+    getUser,
+    isSignedIn,
+  };
 };
 
 export default UserFactory;

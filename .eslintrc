@@ -24,6 +24,7 @@
         }
       }
     ],
+    "angular/no-service-method": 0,
     "angular/module-setter": 0,
     "require-jsdoc": [
       "error",
